@@ -1,5 +1,4 @@
 <?php
-echo "My sql are start hare"."  "."welcom we are ready to that stage to connect tha database";
 /* two way to connect the database
 my sqli extenstion
 pdo(jb ik sy ziyda server py run krna ho tb pdo my code likhna)*/
@@ -20,17 +19,20 @@ $connection = mysqli_connect("localhost", "root", "", "core_ppt");
 
 
 */
-$servername = "local host";
-$username = "root";
+
+    echo "My sql are start Hare"."  "."Welcom we are ready to that stage to connect tha Database.";
+
+$servername = "localhost";
+$username = "username";
 $password = "";
 
-$conn = mysqli_connect($servername, $username, $password);
+// Create connection
+$conn = new mysqli($servername, $username, $password);
 
-if(!$conn)
-{
-   die("sorry we failed to connect: ". mysqli_connect_error());
+// Check connection
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
 }
-else{
-echo "connection is successful";
-  } 
+echo "<br>";
+echo "Connected successfully";
 ?>
