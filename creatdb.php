@@ -1,4 +1,11 @@
 <?php
+
+/*
+asa kn krta ha
+db kud create kr lo phpmyadmin sa adhr sa koi ni krta
+tum table bnana ki kr lo practice db ma.
+*/
+
 $servername = "localhost";
 $username = "username";
 $password = "";
