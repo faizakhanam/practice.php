@@ -48,7 +48,8 @@
   </div>
 </nav>      
 <?php
-if($_SERVER['REQUEST_METHOD'] == 'POST')
+//if($_SERVER['REQUEST_METHOD'] == 'POST')
+if(isset($_POST['submit'])) //add this [HASEEB]
 {
 $name = $_POST['name'];
 $email = $_POST['email'];
@@ -119,7 +120,7 @@ else
   <textarea class="form-control" name="des" id="des" cols="30" rows="10"></textarea>  
   </div>
   
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="submit" name="submit" class="btn btn-primary">Submit</button><!-- add name to submit button important -->
 </form>
       </div>
 
